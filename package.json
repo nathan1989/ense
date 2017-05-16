@@ -1,10 +1,10 @@
 {
   "name": "ense",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple web framework which is for modern browsers and written with modern and future code.",
   "author": "Nathan Smith <nathansmithdeveloper@gmail.com>",
-  "repository" : { 
-    "type" : "git", 
-    "url" : "https://github.com/nathan1989/ense.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathan1989/ense.git"
   }
 }
