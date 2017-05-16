@@ -1,0 +1,12 @@
+// paddings
+@each $key, $value in $global-padding {
+    .padding-bottom-#{$key}{
+        padding-bottom: #{$value};
+    }
+}
+
+@each $key, $value in $global-padding {
+    .padding-top-#{$key}{
+        padding-top: #{$value};
+    }
+}

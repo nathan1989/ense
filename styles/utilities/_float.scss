@@ -1,0 +1,23 @@
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-none {
+    float: none;
+}
+
+.float-left-medium {
+    @include breakpoint(md){
+        float: left;
+    }
+}
+
+.float-right-medium {
+    @include breakpoint(md){
+        float: right;
+    }
+}

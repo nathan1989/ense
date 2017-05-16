@@ -1,0 +1,4 @@
+// clears children element floats for parent elements
+.clearfix {
+    @include clearfix;
+}

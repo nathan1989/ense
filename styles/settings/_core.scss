@@ -1,0 +1,21 @@
+// Settings (variables)
+// To override default variables, use the set function
+// Examples:
+// $headings-core: set($headings-core, font-family, Georgia);
+// $headings: set($headings, h1, font-size--large, 55px);
+// $headings: set($headings, h2, font-size--large, 45px);
+// 
+// To get variables, use the get function
+// Examples:
+// $body-font-family: get($body, font-family);
+// .button {
+//   font-family: get($button, font-family);
+// }
+@import "global";
+@import "colours";
+@import "typography";
+@import "buttons";
+@import "breakpoints";
+@import "fonts";
+@import "link";
+@import "article";

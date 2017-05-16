@@ -1,0 +1,70 @@
+// article
+// Example:
+// 
+// <article class="article">
+//     <img src="http://lorempixel.com/300/300/" alt="" class="image">
+//     <div class="inner">      
+//       <h3 class="title">Article title</h3>
+//       <p>GitHub is where people build software. More than 21 million people use GitHub to discover, fork, and contribute to over 58 million projects.</p>
+//     </div>
+// </article>
+
+[class*="article"] {
+    display: flex;
+    align-items: center;
+
+    .image {
+        flex: 0 0 auto;
+        display: flex;
+    }
+
+    .inner {
+        padding: get($article, padding);
+    }
+
+    + [class*="article"] {
+        margin-top: get($global-margin, small);
+        @include breakpoint(md){
+            margin-top: get($global-margin, medium);
+        }
+    }
+}
+
+.article-bordered {
+    border: get($article, border) solid get($article, border-color);
+
+    .image {
+        margin: -1px;
+    }
+}
+
+.article-responsive {
+    display: block;
+    @include breakpoint(md){
+        display: flex;
+    }
+    .image {
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        @include breakpoint(sm){
+            width: auto;
+        }
+        @include breakpoint(md){
+            display: flex;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+.article-stacked {
+    display: block;
+
+    .image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,9 @@
+// breakpoints in px values
+$breakpoints: (
+    xs: 320px,
+    sm: 480px,
+    md: 768px,
+    lg: 960px,
+    xlg: 1280px,
+    xxlg: 1440px
+) !default;

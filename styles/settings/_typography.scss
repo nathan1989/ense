@@ -1,0 +1,95 @@
+// body
+$body: (
+    font-family: #{'Helvetica Neue', Helvetica, Arial, sans-serif},
+    font-weight: normal,
+    colour: black,
+    font-size: 14px,
+    font-size--large: 16px, 
+    line-height: 18px,
+    line-height--large: 24px, 
+) !default;
+
+// lead paragraph
+$lead-paragraph: (
+    font-size: 20px,
+    font-size--large: 24px,
+    line-height: 18px,
+    line-height--large: 24px, 
+) !default;
+
+// links
+$link: (
+    color: #007cb9,
+    text-decoration: none,
+    color-hover: #005682,
+    color-focus: #005682,
+    color-active: #003f61,
+) !default;
+
+// headings
+$headings-core: (
+    font-family: #{'Helvetica Neue', Helvetica, Arial, sans-serif},
+    font-weight: normal,
+    text-transform: none,
+    color: black,
+    letter-spacing: -.25px,
+    line-height: 1.1,
+) !default;
+
+// headings through h1-h6
+$headings: (
+    h1: (
+        font-size: 30px,
+        font-size--large: 48px,
+        letter-spacing: -.1px
+    ),
+    h2: (
+        font-size: 24px,
+        font-size--large: 36px
+    ),
+    h3: (
+        font-size: 24px,
+        font-size--large: 30px
+    ),
+) !default;
+
+// .subheading styles
+$subheading: (
+    font-size: 20px,
+    font-size--large: 30px,
+) !default;
+
+// <code> styles
+$code: (
+    font-family: #{Consolas, monospace, serif},
+    font-size: 12px,
+    color: black,
+) !default;
+
+// <em>, <i> styles
+$em: (
+    font-style: italic,
+) !default;
+
+// <q> styles
+$quote: (
+    font-style: italic,
+) !default;
+
+// <blockquote> styles
+$blockquote: (
+    padding-left: 15px,
+    border: #ddd,
+    border-width: 5px,
+    font-size: 16px,
+    line-height: 22px,
+    font-style: italic,
+) !default;
+
+// <hr> styles
+$hr: (
+    margin-vertical: get($global-margin, medium),
+    border: #ddd,
+    border-width: 1px,
+) !default;
+

@@ -1,0 +1,24 @@
+a,
+.link {
+    color: get($link, color);
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    
+    &:active,
+    &:hover {
+        outline-width: 0;
+    }
+
+    &:hover {
+        color: get($link, hover-color);
+    }
+
+    &[disabled] {
+        pointer-events: none;
+    }
+}
+
+// mailto links
+[href^="mailto:"]{
+  word-wrap: break-word;
+}

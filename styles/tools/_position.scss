@@ -1,0 +1,8 @@
+@mixin position($pos, $t, $r, $b, $l, $z: false) {
+	@if $pos { position: $pos; }
+	@if $t { top: $t; }
+	@if $r { right: $r; }
+	@if $b { bottom: $b; }
+	@if $l { left: $l; }
+	@if $z { z-index: $z; }
+}

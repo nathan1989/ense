@@ -1,0 +1,30 @@
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left-medium {
+    @include breakpoint(md){
+        text-align: left;
+    }
+}
+
+.text-align-right-medium {
+    @include breakpoint(md){
+        text-align: right;
+    }
+}
+
+.text-align-center-small {
+    text-align: center;
+    @include breakpoint(md){
+        text-align: left;
+    }
+}

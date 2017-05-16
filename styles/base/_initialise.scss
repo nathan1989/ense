@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: get($body, font-family);
+  font-weight: get($body, font-weight);
+  font-size: get($body, font-size);
+  line-height: get($body, line-height);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  @include breakpoint(md){
+    font-size: get($body, font-size--large);
+    line-height: get($body, line-height--large);
+  }
+}
+
+// box size and reset all the things
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  backface-visibility: hidden;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  font-size: inherit;
+  margin: 0;
+}
+
+// correct style for IE
+main {
+  display: block;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+// Styling on warning for users on IE11 or below
+.browsehappy {
+  text-align: center;
+  margin: 0;
+  background: #fff8e2;
+  color: #000;
+  padding: 0.5em 0;
+}

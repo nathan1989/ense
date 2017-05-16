@@ -1,0 +1,36 @@
+// global things
+$enable-border-radius: true;
+$enable-box-shadow: true;
+
+$global: (
+    border-radius: 6px,
+    border-width: 1px,
+    box-shadow: 0 0 0 2px rgba(0,0,0,.2),
+    gutter-small: 10px,
+    gutter-large: 20px,
+) !default;
+
+// container
+$container: (
+    max-width: 1280px,
+) !default;
+
+// margins
+$global-margin: (
+    small: 5px,
+    medium: 15px,
+    large: 30px,
+) !default;
+
+// paddings
+$global-padding: (
+    small: 2px,
+    medium: 5px,
+    large: 10px,
+) !default;
+
+// section margins
+$global-section-margin: (
+    small: 45px,
+    medium: 60px,
+) !default;

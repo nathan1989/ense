@@ -1,0 +1,14 @@
+// Inspired by https://css-tricks.com/snippets/sass/deep-getset-maps/
+// Example:
+// h1 {
+//   font-size: get($heading, h1, font-size);
+// }
+@function get($map, $keys...) {
+    @if length($keys) == 1 {
+        $keys: nth($keys, 1);
+    }
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

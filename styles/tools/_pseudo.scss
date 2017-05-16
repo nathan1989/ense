@@ -1,0 +1,9 @@
+// shorthand mixin for psuedo elements
+@mixin pseudo($display: block, $content: ''){
+    content: $content;
+    @if($display == 'absolute' or $display == 'relative'){
+        position: $display;
+    } @else {
+        display: $display;
+    }
+}

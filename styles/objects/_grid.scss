@@ -1,0 +1,48 @@
+// grid variables
+$grid-columns: 12 !default;
+$grid-gutter: (
+    small: 5px,
+    medium: 15px,
+) !default;
+
+// grid
+[class*="grid"] {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// loop over flex grid options
+@each $key, $value in $breakpoints {
+  @for $i from 2 through $grid-columns {
+    .grid-#{$key}-col-#{$i} {
+
+      > * {
+        flex: 0 0 100%;
+      }
+      @include breakpoint($key) {
+        > * {
+            flex: 0 0 #{100% / $i};
+        }
+      }
+
+    }
+  }
+}
+
+// grid with gutter
+.grid-gutter {
+    margin-left: -#{get($grid-gutter, small)};
+    margin-bottom: -#{get($grid-gutter, small)};
+    @include breakpoint(md){
+        margin-left: -#{get($grid-gutter, medium)};
+        margin-bottom: -#{get($grid-gutter, medium)};
+    }
+    > * {
+        padding-left: get($grid-gutter, small);
+        margin-bottom: get($grid-gutter, small);
+        @include breakpoint(md){
+            padding-left: get($grid-gutter, medium);
+            margin-bottom: get($grid-gutter, medium);
+        }
+    }
+}

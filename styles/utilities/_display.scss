@@ -1,0 +1,42 @@
+// blocks
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-inline {
+    display: inline;
+}
+
+// flex
+.display-flex {
+    display: flex;
+}
+
+@each $item in flex-end, center, space-between, space-around {
+    .justify-content-#{$item}{
+        justify-content: #{$item};
+    }
+}
+
+@each $item in flex-start, flex-end, center, baseline {
+    .align-items-#{$item}{
+        align-items: #{$item};
+    }
+}
+
+@each $item in row-reverse, column, column-reverse {
+    .flex-direction-#{$item}{
+        flex-direction: #{$item};
+    }
+}
+
+@each $item in wrap, wrap-reverse {
+    .flex-wrap-#{$item}{
+        flex-wrap: #{$item};
+    }
+}
+

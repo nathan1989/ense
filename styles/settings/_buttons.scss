@@ -1,0 +1,31 @@
+// .button variables
+$button: (
+    font-family: map-get($body, font-family),
+    border-radius: get($global, border-radius),
+    font-size: 16px,
+    font-size--large: 18px,
+    color: white,
+    background-color: #007cb9,
+    hover-color: white,
+    hover-background-color: #006da4,
+    active-color: white,
+    active-background-color: #006394,
+    height-small: 40px,
+    height-large: 48px,
+    padding-small: 5px,
+    padding-large: 10px,
+) !default;
+
+// .button-secondary styles
+$button-secondary: (
+    font-family: map-get($body, font-family),
+    border-radius: get($global, border-radius),
+    font-size: get($global, font-size),
+    font-size--large: get($global, font-size--large),
+    color: #007cb9,
+    background-color: white,
+    hover-color: #0373ac,
+    hover-background-color: #fbfbfb,
+    active-color: #007cb9,
+    active-background-color: #f8f8f8,
+) !default;

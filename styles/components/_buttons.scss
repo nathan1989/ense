@@ -1,0 +1,62 @@
+// buttons
+// Example:
+// <button class="button">This is a button</button>
+// <a href="" class="button">This is a button</a>
+// <button class="button-secondary">This is a button</button>
+// <a href="" class="button-secondary">This is a secondary button</a>
+
+[class*="button"] {
+  appearance: none;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  cursor: pointer;
+  @if $enable-border-radius {
+    border-radius: get($global, border-radius);
+  }
+  
+  &:active {
+    outline: 0;
+  }
+}
+
+@mixin button-style($button){
+  font-family: get($button, font-family);
+  font-size: get($button, font-size);
+  color: get($button, color);
+  background-color: get($button, background-color);
+  padding-left: get($button, padding-small);
+  padding-right: get($button, padding-small);
+  height: get($button, height-small);
+  line-height: get($button, height-small);
+
+  @include breakpoint(md) {
+    font-size: get($button, font-size--large);
+    padding-left: get($button, padding-large);
+    padding-right: get($button, padding-large);
+    height: get($button, height-large);
+    line-height: get($button, height-large);
+  }
+
+  &:hover {
+    color: get($button, hover-color);
+    background-color: get($button, hover-background-color);
+  }
+
+  &:active {
+    color: get($button, active-color);
+    background-color: get($button, active-background-color);
+  }
+}
+
+.button {  
+  @include button-style($button);
+}
+
+.button-secondary {
+  @include button-style($button-secondary);
+}

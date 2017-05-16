@@ -1,0 +1,8 @@
+// shorthand for clearing floats to an element with floating children
+@mixin clearfix {
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}

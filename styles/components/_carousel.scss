@@ -1,0 +1,117 @@
+// carousel
+.carousel-wrapper {
+  position: relative;
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+
+    + .slide {
+        margin-top: 0;
+    }
+  }
+
+  .showing {
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.carousel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel-controls,
+.carousel-dots {
+  font-size: 0;
+  background: transparent;
+  padding: 0;
+  z-index: 10;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(black, .65);
+  @include size(36px, 48px);
+
+  @include breakpoint(md){
+    @include size(66px, 90px);
+  }
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2018.65%2033.77%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3Anone%3Bstroke%3A%23fff%3Bstroke-miterlimit%3A10%3Bstroke-width%3A2.5px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpolyline%20class%3D%22cls-1%22%20points%3D%2217.77%200.88%201.77%2016.88%2017.77%2032.88%22%2F%3E%3C%2Fsvg%3E) left center/contain no-repeat;
+    @include size(8px, 16px);
+    @include breakpoint(md){
+      @include size(16px, 32px);
+    }
+  }
+}
+
+.carousel-controls.prev {
+  left: 0;
+}
+.carousel-controls.next {
+  right: 0;
+  &:before {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2018.65%2033.77%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3Anone%3Bstroke%3A%23fff%3Bstroke-miterlimit%3A10%3Bstroke-width%3A2.5px%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpolyline%20class%3D%22cls-1%22%20points%3D%220.88%2032.88%2016.88%2016.88%200.88%200.88%22%2F%3E%3C%2Fsvg%3E);
+  }
+}
+.change-carousel {
+  display: none;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint(md){
+    bottom: -35px;
+  }
+
+  > * {     
+    display: inline-block;
+    @include size(8px, 8px);
+    border-radius: 100%;
+    background: rgba(#203640, .2);
+    cursor: pointer;
+    @include breakpoint(md){
+      @include size(11px, 11px);
+    }
+    &:not(:last-child){
+      margin-right: 10px;
+      @include breakpoint(md){
+        margin-right: 15px;
+      }
+    }
+  }
+  .active {
+    background: blue;
+  }
+}

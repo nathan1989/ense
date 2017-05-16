@@ -1,0 +1,12 @@
+// margins
+@each $key, $value in $global-margin {
+    .margin-bottom-#{$key}{
+        margin-bottom: #{$value};
+    }
+}
+
+@each $key, $value in $global-margin {
+    .margin-top-#{$key}{
+        margin-top: #{$value};
+    }
+}

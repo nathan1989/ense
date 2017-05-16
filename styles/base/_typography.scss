@@ -1,0 +1,165 @@
+// headings
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: unquote(map-get($headings-core, font-family));
+  font-weight: get($headings-core, font-weight);
+  color: map-get($headings-core, color);
+  line-height: get($headings-core, line-height);
+  margin: 0;
+  // any next sibling
+  + * {
+    margin-top: get($global-margin, small);
+    @include breakpoint(md) {
+      margin-top: get($global-margin, medium);
+    }
+  }
+  // heading links
+  a {
+    text-decoration: none;
+  }
+}
+
+@each $element, $value in $headings {
+  #{$element},
+  .#{$element} {
+    font-size: get($headings, $element, font-size);
+    letter-spacing: get($headings, $element, letter-spacing);    
+    @include breakpoint(md) {
+        font-size: get($headings, $element, font-size--large);
+        line-height: get($headings, $element, line-height);
+    }
+  }
+}
+
+// subheading
+.subheading {
+  font-family: get($subheading, font-family);
+  font-size: get($subheading, font-size);
+  line-height: get($subheading, line-height);
+  @include breakpoint(md) {
+    font-size: get($subheading, font-size--large);
+    line-height: get($subheading, line-height--large);
+  }
+}
+
+// lead paragraph
+.lead {
+  font-size: get($lead-paragraph, font-size);
+  line-height: get($lead-paragraph, line-height);
+
+  @include breakpoint(md){
+    font-size: get($lead-paragraph, font-size--large);
+    line-height: get($lead-paragraph, line-height--large);
+  }
+}
+
+// paragraph
+p {
+  &:last-of-type:not(:only-of-type),
+  &:only-child {
+    margin-bottom: 0;
+  }
+}
+
+// other text elements
+b,
+strong {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: get($em, font-style);
+}
+
+q {
+  font-style: get($quote, font-style);
+}
+
+ul,
+ol {
+  padding-left: 40px;
+}
+
+li + li {
+  margin-top: get($global-margin, small);    
+}
+
+blockquote {
+    padding-left: get($blockquote, padding-left);
+    border-left: get($blockquote, border-width) solid get($blockquote, border);
+    font-size: get($blockquote, font-size);
+    line-height: get($blockquote, line-height);
+    font-style: get($blockquote, font-style);
+}
+
+address { 
+  font-style: normal; 
+}
+
+hr {
+  height: 0;
+  margin: get($hr, margin-vertical) 0;
+  border: 0;
+  border-top: get($hr, border-width) solid get($hr, border);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: get($code, font-family);
+  font-size: get($code, font-size);
+  color: get($code, color);
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+textarea {
+  overflow: auto;
+}
+
+// global spacing style for block elements
+* + p,
+* + ul,
+* + ol,
+* + dl,
+* + article,
+* + blockquote,
+* + pre,
+* + address,
+* + fieldset,
+* + figure {
+  margin-top: get($global-margin, small);
+  @include breakpoint(md){
+    margin-top: get($global-margin, medium);
+  }
+}
