@@ -2,7 +2,17 @@
 
 Ense is a simple web framework which is for modern browsers and written with modern and future code.
 
+## Dependencies
+
+- SASS compiler
+- Babel
+- PostCSS or similar autoprefixing tool (if you need to consider browser prefixes)
+
 ## Getting started
+
+```
+npm install ense --save-dev
+```
 
 ## CSS
 
@@ -16,7 +26,8 @@ Simply import all of the SCSS code to your custom SCSS file.
 
 #### Recommended SCSS import
 
-Recommended method is to import each SCSS module folder. This way you can choose if you want to use certain styles. Be sure to include your custom styles AFTER ```/settings``` and ```/tools``` and BEFORE everything else. This way you can override Ense variables which update Ense CSS classes.
+Recommended method is to import each SCSS module folder. This way you can choose if you want to use certain styles. 
+Be sure to include your custom styles after the ```settings/*``` and ```tools/*``` files and before everything else. This way you can override Ense variables which update Ense CSS classes.
 
 ```
 // Settings
@@ -41,13 +52,13 @@ Recommended method is to import each SCSS module folder. This way you can choose
 
 ```
 
+#### CSS CDN
+
+Coming soon.
+
 ## JS
 
-Ense Javascript is written in ES6/ES2015, so you will need Babel or similar to compile it to todays Javascript.
-
-#### Babel
-
-[Babel](http://babeljs.io/) is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.
+Ense Javascript is written in ES6/ES2015, so you will need Babel to compile it to todays Javascript. [Babel](http://babeljs.io/) is a next generation JavaScript compiler. One of the features is the ability to use ES6/ES2015 modules now, even though browsers do not yet support this feature natively.
 
 ```js
 import Ense from "ense"
@@ -57,35 +68,9 @@ import Ense from "ense"
 new Ense()
 ```
 
-#### Browserify/Webpack
+#### JS CDN
 
-There are several ways to use [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/). For more information on using these tools, please refer to the corresponding project's documention. In the script, including Ense will usually look like this...
-
-```js
-var Ense = require("ense");
-.
-.
-.
-new Ense();
-```
-
-#### AMD (Asynchronous Module Definition)
-
-AMD is a module format built for the browser. For more information, we recommend [require.js' documentation](http://requirejs.org/docs/whyamd.html).
-
-```js
-define(["ense"], function(Ense) {
-
-});
-```
-
-### Node
-
-To include Ense in [Node](nodejs.org), first install with npm.
-
-```sh
-npm install ense --save-dev
-```
+Coming soon.
 
 ## Versioning
 
