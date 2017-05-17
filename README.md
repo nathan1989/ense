@@ -59,7 +59,7 @@ new Ense()
 
 #### Browserify/Webpack
 
-There are several ways to use [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/). For more information on using these tools, please refer to the corresponding project's documention. In the script, including jQuery will usually look like this...
+There are several ways to use [Browserify](http://browserify.org/) and [Webpack](https://webpack.github.io/). For more information on using these tools, please refer to the corresponding project's documention. In the script, including Ense will usually look like this...
 
 ```js
 var Ense = require("ense");
@@ -81,7 +81,7 @@ define(["ense"], function(Ense) {
 
 ### Node
 
-To include jQuery in [Node](nodejs.org), first install with npm.
+To include Ense in [Node](nodejs.org), first install with npm.
 
 ```sh
 npm install ense --save-dev
