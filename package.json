@@ -8,5 +8,10 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/nathan1989/ense.git"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   }
 }
