@@ -11,7 +11,7 @@ Ense is a simple web framework which is for modern browsers and written with mod
 ## Getting started
 
 ```
-npm install ense --save-dev
+npm install ense --save
 ```
 
 ## CSS
